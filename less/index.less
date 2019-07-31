@@ -57,3 +57,114 @@ html, body {
     height: 100%;
 }
 
+//Here comes the Less
+//Mixins
+.flex {
+	display: flex;
+	flex-flow: row nowrap;
+}
+.bordered {
+	border: 1px solid black;
+}
+
+.text-style {
+	font-family: "Open Sans", sans-serif;
+	color: black;
+	line-height: 1.4rem;
+	font-size: 1rem;
+}
+.spacing {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	.text-style();
+	.bordered();
+	padding: 10px;
+
+	header {
+		margin-top: 10px;
+		border-bottom: 1px solid lightgrey;
+	}
+	nav {
+		.flex();
+		justify-content: flex-end;
+		
+		a {
+			margin-right: 20px;
+			text-decoration: none;
+			color: darkgrey;
+		}
+		a:hover {
+			color: black;
+		}
+	}
+
+	h1 {
+		.spacing();
+		font-size: 2rem;
+		text-align: center;
+	}
+	h2 {
+		font-size: 1.5rem;
+		font-weight: 200;
+		font-family: "Oxygen", "Open Sans", sans-serif;
+	}
+	strong {
+		font-weight: 500;
+	}
+	li {
+		list-style-type: disc;
+		margin-left: 15px;
+	}
+	form {
+		width: 430px;
+		margin: 0 auto;
+		.flex();
+		flex-direction: column;
+
+		.contact-form {
+			.flex();
+			justify-content: space-between;
+			input, label {
+				margin-bottom: 8px;
+			}
+			input {
+				width: 75%
+			}
+		}
+		.submit {
+			.spacing();
+			margin: 0 auto;
+		}
+	}
+	.resume-header h2 {
+		border-bottom: 1px solid lightgrey;
+		margin-bottom: 10px;
+
+	}
+
+	.intro {
+		.flex();
+		div, img {
+			width: 50%;
+			padding: 10px;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+	}
+	section {
+		margin-bottom: 30px;
+		font-size:.9rem;
+	}
+
+
+	.work-history-head {
+		font-weight: bold;
+		.flex();
+		justify-content: space-between;
+	}
+}

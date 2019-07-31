@@ -7,6 +7,8 @@
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet"> 
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +16,72 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+    <header>
+      <nav class="navbar">
+        <a href="">About</a>
+        <a href="">Portfolio</a>
+        <a href="">Blog</a>
+        <a href="">Contact</a>
+      </nav>
+    </header>
+    <h1>My Resume</h1>
+    <section class="intro">
+      <img src="img/david.png" alt="Picture of David">
+      <div>
+        <p>Welcome to my resume! My name is David Francis, and this is my online resume.</p>
+      </div>  
+    </section>
+
+    <section class="skills resume-header">
+      <h2>
+        Skills:
+      </h2>
+      <p>Javascript, Python, algorithms, statistics, quantititative and qualitative research, data analysis.</p>
+    </section>
+
+    <section class="work-history resume-header">
+        <h2>
+          Work History:
+        </h2>
+        <div class="work-history-head">
+          <p>Research Director, Talent Tech Labs</p>
+          <p>May 2019 - Present</p>
+
+        </div>
+        <div class="work-history-content">
+          <ol>
+            <li>Run a global research team, write research, fly to NYC all the time.</li>
+            <li>Schmooze around with CEOs.</li>
+            <li>Predict the future.</li>
+          </ol> 
+        </div>
+      </section>
+
+      <section class="contact-form-section resume-header">
+          <h2>
+            Get in touch:
+          </h2>
+          <form action="" method="get" class="contact-form">
+            <div class="contact-form">
+              <label for="name">Name: </label>
+              <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="contact-form">
+              <label for="email">Email: </label>
+              <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="submit">
+              <input type="submit" value="Submit! :)">
+            </div>
+          </form>
+
+        </section>
+   
+
+  </div> <!-- End of container div -->
+
+
 </body>
 </html>
