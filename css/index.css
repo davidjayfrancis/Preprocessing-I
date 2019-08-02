@@ -139,7 +139,8 @@ body {
   flex-flow: row nowrap;
 }
 .bordered {
-  border: 1px solid black;
+  border-right: 2px solid lightgrey;
+  border-left: 2px solid lightgrey;
 }
 .text-style {
   font-family: "Open Sans", sans-serif;
@@ -158,8 +159,17 @@ body {
   color: black;
   line-height: 1.4rem;
   font-size: 1rem;
-  border: 1px solid black;
+  border-right: 2px solid lightgrey;
+  border-left: 2px solid lightgrey;
   padding: 10px;
+}
+@media (max-width:500px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+  }
 }
 .container header {
   margin-top: 10px;
@@ -178,16 +188,25 @@ body {
 .container nav a:hover {
   color: black;
 }
-.container h1 {
+@media (max-width:500px) {
+  .container nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.container .resume-title {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 2rem;
   text-align: center;
+  padding-bottom: 20px;
+  padding-top: 25px;
 }
 .container h2 {
   font-size: 1.5rem;
   font-weight: 200;
   font-family: "Oxygen", "Open Sans", sans-serif;
+  line-height: 3rem;
 }
 .container strong {
   font-weight: 500;
@@ -202,6 +221,11 @@ body {
   display: flex;
   flex-flow: row nowrap;
   flex-direction: column;
+}
+@media (max-width:500px) {
+  .container form {
+    width: 100%;
+  }
 }
 .container form .contact-form {
   display: flex;
@@ -228,12 +252,47 @@ body {
   display: flex;
   flex-flow: row nowrap;
 }
-.container .intro div,
+.container .intro .intro-content,
 .container .intro img {
   width: 50%;
   padding: 10px;
   text-align: center;
   margin-bottom: 30px;
+}
+@media (max-width:500px) {
+  .container .intro .intro-content,
+  .container .intro img {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}
+.container .intro .intro-content {
+  display: flex;
+  flex-direction: column;
+}
+.container .intro .intro-content .button-container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.container .intro .intro-content button {
+  height: 30px;
+  border-radius: 5%;
+  width: 50%;
+}
+@media (max-width:500px) {
+  .container .intro .intro-content button {
+    margin-top: 30px;
+  }
+}
+.container .intro .intro-content button:hover {
+  background: #00b3b3;
+}
+@media (max-width:500px) {
+  .container .intro {
+    flex-direction: column;
+  }
 }
 .container section {
   margin-bottom: 30px;
@@ -244,4 +303,9 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+}
+@media (max-width:500px) {
+  .container .work-history-head {
+    background: #eee;
+  }
 }
